@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart } from "../state/cartSlice";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.data);
-  const dispatch = useDispatch();
-  const buttonClickedHandler = (itemId) => {
-    dispatch(removeFromCart({ cartItem: itemId }));
-  };
+  const buttonClickedHandler = (itemId) => {};
 
   useEffect(() => {
     console.log(`cartItems`, cartItems);
